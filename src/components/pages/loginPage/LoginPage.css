@@ -27,3 +27,6 @@
 .carousel img{
     width: fit-content;
 }
+.Chatbot{
+    z-index: 10;
+}

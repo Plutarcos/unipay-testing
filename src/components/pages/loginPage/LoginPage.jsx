@@ -1,8 +1,10 @@
 import React from 'react'
 import './LoginPage.css'
+
 import LoginForm from './LoginForm'
 import Card from '../../layout/Card/Card'
-import Carousel from 'react-bootstrap/Carousel'
+import ChatbotComponent from '../../others/Chatbot/Chatbot'
+import { Carousel, Dropdown } from 'react-bootstrap'
 import cardAd from '../../../images/cardAd.jpg'
 import criptoAd from '../../../images/criptoAd.jpg'
 
@@ -14,7 +16,7 @@ export default function LoginPage() {
         <div className="LoginPage">
             <h2>UNIPAY</h2>
             <div className="LoginForm">
-                
+
                 <Card titulo="Login" color="#ffff00" borderR="20px">
                     <LoginForm />
                 </Card>
@@ -43,6 +45,18 @@ export default function LoginPage() {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+
+            <div className="Chatbot">
+                <Dropdown drop="up">
+                    <Dropdown.Toggle variant="outline-info" id="dropdown-basic">
+                        Ajuda
+                     </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                        <ChatbotComponent />
+                    </Dropdown.Menu>
+                </Dropdown>
+            </div>
         </div>
     )
 

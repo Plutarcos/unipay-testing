@@ -1,6 +1,5 @@
 import React from 'react'
 import Card from '../../layout/Card/Card'
-import Chatbot from 'react-chatbot-kit'
 import { Redirect } from "react-router-dom"
 
 

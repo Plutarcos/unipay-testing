@@ -19,7 +19,7 @@ class MessageParser {
 
         if (greetingMessages.includes(lowerCaseMessage)) {
             this.actionProvider.greet()
-        }else{
+        } else {
             this.actionProvider.sorry();
         }
 

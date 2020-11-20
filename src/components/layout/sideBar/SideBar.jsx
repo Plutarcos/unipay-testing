@@ -1,5 +1,4 @@
 import React from 'react'
-import ChatbotComponent from '../../others/Chatbot/Chatbot'
 import Dropdown from 'react-bootstrap/Dropdown'
 
 import './SideBar.css'
@@ -25,18 +24,6 @@ export default function SideBar() {
                         <Dropdown.Item href="#/Cards">Cartões</Dropdown.Item>
                         <Dropdown.Item href="#/Extract">Extrato</Dropdown.Item>
                         <Dropdown.Item href="/Login" onClick={() => Logout()}>Sair</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
-            </div>
-
-            <div className="Chatbot">
-                <Dropdown drop="up">
-                    <Dropdown.Toggle variant="outline-info" id="dropdown-basic">
-                        Ajuda
-                     </Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                        <ChatbotComponent />
                     </Dropdown.Menu>
                 </Dropdown>
             </div>

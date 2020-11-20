@@ -1,10 +1,22 @@
-import { createChatBotMessage } from "react-chatbot-kit";
+import { createChatBotMessage } from "react-chatbot-kit"
+import DoubtOptions from "../ChatOptions/criptocurrencys"
+
 
 const config = {
     botName: 'PimBot',
     initialMessages: [
-        createChatBotMessage(`Olá, meu nome é PimBot. Por enquanto eu ainda não funciono direito, mas quando estiver pronto pode ter certeza que vai ser top 😁🤞`)
-    ],
+        createChatBotMessage(`Olá, eu sou o PimBot, O Assistente virtual da Unipay. Em que posso ajuda-lo? `,{
+        widget: "doubtOptions",
+        
+    }),
+  ],
+
+ widgets: [
+     {
+     	widgetName: "doubtOptions",
+    	widgetFunc: (props) => <DoubtOptions {...props} />,
+     },
+ ],
 }
 
 
