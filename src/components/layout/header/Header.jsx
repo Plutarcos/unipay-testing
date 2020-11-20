@@ -13,7 +13,7 @@ export default function Header() {
             </div>
 
             <div className="userData">
-                <h2>{userName}</h2>
+                <h3>{userName}</h3>
             </div>
         </header>
     )

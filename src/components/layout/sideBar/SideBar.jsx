@@ -14,7 +14,7 @@ export default function SideBar() {
         <div>
             <div className="sideBar">
                 <Dropdown>
-                    <Dropdown.Toggle variant="dark" id="dropdown-basic">
+                    <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
                         Menu
                 </Dropdown.Toggle>
 

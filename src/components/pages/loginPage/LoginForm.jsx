@@ -1,5 +1,6 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
+import Button from 'react-bootstrap/Button'
 
 
 var isLoggedIn = localStorage.getItem("isLoggedIn") || false
@@ -19,8 +20,8 @@ export default function LoginForm() {
                 <form onSubmit={() => Login()}>
                     <input id="userName" type="text" placeholder="Usuario" /> <br />
                     <input type="password" placeholder="Senha" /> <br />
-                    <button type="submit">Login</button>
-                    <a href="/Cadastro"><button type="button">Cadastrar</button> </a>
+                    <Button type="submit" variant="outline-warning">Login</Button>
+                    <a href="/Cadastro"><Button variant="outline-warning" type="button">Cadastrar</Button> </a>
                 </form>
             </div>
         )

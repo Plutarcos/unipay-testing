@@ -17,13 +17,13 @@ export default function MainPage() {
         return (
             <div>
                 <div className="mainContent">
-                    <Card titulo="Minha Conta" width="500px" height="300px">
+                    <Card titulo="Minha Conta" color="gold" width="500px" height="300px">
                         <h3>Saldo: </h3>
                         <h3>Fatura: </h3>
                         <h3>Limite: </h3>
                     </Card>
 
-                    <Card titulo="Transferências" width="500px" height="300px">
+                    <Card titulo="Transferências" color="gold" width="500px" height="300px">
                         <ul style={{ listStyle: 'none', textAlign: 'initial' }}>
                             <li> 1- Nome: Marcos Paulo - Valor:R$50,00</li>
                             <li> 1- Nome: Paulo Marcos - Valor:R$500,00</li>
