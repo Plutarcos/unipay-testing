@@ -13,14 +13,20 @@ export default function SideBar() {
     return (
         <div>
             <div className="sideBar">
-                <div className="buttons">
-                    <a href="#User">Minha Conta</a>
-                    <a href="#Deposits">Depósitos</a>
-                    <a href="#Payments">Pagamentos</a>
-                    <a href="#Cards">Cartões</a>
-                    <a href="#Extract">Extrato</a>
-                    <a href="/Login" onClick={() => Logout()}>Sair</a>
-                </div>
+                <Dropdown>
+                    <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                        Menu
+                </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                        <Dropdown.Item href="#/User">Minha Conta</Dropdown.Item>
+                        <Dropdown.Item href="#/Deposits">Depósitos</Dropdown.Item>
+                        <Dropdown.Item href="#/Payments">Pagamentos</Dropdown.Item>
+                        <Dropdown.Item href="#/Cards">Cartões</Dropdown.Item>
+                        <Dropdown.Item href="#/Extract">Extrato</Dropdown.Item>
+                        <Dropdown.Item href="/Login" onClick={() => Logout()}>Sair</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
             </div>
 
             <div className="Chatbot">
