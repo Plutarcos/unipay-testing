@@ -4,3 +4,6 @@
     display: flexbox;
     padding: 10px;
 }
+.userData{
+    text-align: right;
+}

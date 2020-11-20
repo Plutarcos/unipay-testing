@@ -14,7 +14,7 @@ export default function SideBar() {
         <div>
             <div className="sideBar">
                 <Dropdown>
-                    <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                    <Dropdown.Toggle variant="dark" id="dropdown-basic">
                         Menu
                 </Dropdown.Toggle>
 
@@ -30,7 +30,7 @@ export default function SideBar() {
             </div>
 
             <div className="Chatbot">
-                <Dropdown>
+                <Dropdown drop="up">
                     <Dropdown.Toggle variant="outline-info" id="dropdown-basic">
                         Ajuda
                      </Dropdown.Toggle>
