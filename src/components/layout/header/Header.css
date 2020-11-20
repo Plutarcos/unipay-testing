@@ -1,9 +1,12 @@
 .MainHeader {
     position: relative;
-    background: dimgrey;
+    background: gold;
     display: flexbox;
     padding: 10px;
 }
 .userData{
     text-align: right;
+}
+.Sidebar{
+    text-align: left;
 }

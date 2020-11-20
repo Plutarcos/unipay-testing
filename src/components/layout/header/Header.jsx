@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+import SideBar from '../sideBar/SideBar'
 
 export default function Header() {
 
@@ -7,6 +8,10 @@ export default function Header() {
 
     return (
         <header className="MainHeader">
+            <div className="Sidebar">
+                <SideBar />
+            </div>
+
             <div className="userData">
                 <h2>{userName}</h2>
             </div>

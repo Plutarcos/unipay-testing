@@ -25,10 +25,10 @@ export default function MainPage() {
 
                     <Card titulo="Transferências" width="500px" height="300px">
                         <ul style={{ listStyle: 'none', textAlign: 'initial' }}>
-                            <li> 1- Produto: Marcos Paulo - Valor:R$50,00</li>
-                            <li> 1- Produto: Paulo Marcos - Valor:R$500,00</li>
-                            <li> 1- Produto: Parcos Maulo - Valor:R$5000,00</li>
-                            <li> 1- Produto: Marlo Paucos - Valor:R$50000,00</li>
+                            <li> 1- Nome: Marcos Paulo - Valor:R$50,00</li>
+                            <li> 1- Nome: Paulo Marcos - Valor:R$500,00</li>
+                            <li> 1- Nome: Parcos Maulo - Valor:R$5000,00</li>
+                            <li> 1- Nome: Marlo Paucos - Valor:R$50000,00</li>
                         </ul>
                     </Card>
                 </div>
