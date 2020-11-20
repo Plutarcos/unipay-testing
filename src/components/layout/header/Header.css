@@ -1,0 +1,6 @@
+.MainHeader {
+    position: relative;
+    background: dimgrey;
+    display: flexbox;
+    padding: 10px;
+}
