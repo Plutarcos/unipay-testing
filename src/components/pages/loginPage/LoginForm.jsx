@@ -18,8 +18,8 @@ export default function LoginForm() {
         return (
             <div>
                 <form onSubmit={() => Login()}>
-                    <input id="userName" type="text" placeholder="Usuario" /> <br />
-                    <input type="password" placeholder="Senha" /> <br />
+                    <input id="userName" type="text" placeholder="Usuario" required /> <br />
+                    <input type="password" placeholder="Senha" required/> <br />
                     <Button type="submit" variant="outline-warning">Login</Button>
                     <a href="/Cadastro"><Button variant="outline-warning" type="button">Cadastrar</Button> </a>
                 </form>

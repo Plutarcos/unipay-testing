@@ -17,6 +17,42 @@ class ActionProvider {
         this.updateChatbotState(message);
     };
 
+    criptoWorks = () => {
+        const message =
+            this.createChatBotMessage(
+                "A criptomoeda é um código virtual que pode ser convertido em valores reais. Geralmente, é necessário comprar do emissor ou de alguém que já tenha a moeda. A criptomoeda utiliza criptografia. Ou seja, são códigos difíceis de quebrar e que garantem que as transações sejam muito mais seguras 🔐.",
+                {
+                    widget: "doubtOptions",
+                }
+            );
+
+        this.updateChatbotState(message);
+    };
+
+    criptoBorn = () => {
+        const message =
+            this.createChatBotMessage(
+                "A primeira criptomoeda descentralizada, o Bitcoin, foi criado em 2009 por Satoshi Nakamoto.",
+                {
+                    widget: "doubtOptions",
+                }
+            );
+
+        this.updateChatbotState(message);
+    };
+
+    criptoHow = () => {
+        const message =
+            this.createChatBotMessage(
+                "Nossa plataforma garante um ótimo inicio para quem quer começar a investir em Criptomoedas. Basta criar uma conta e começar a fazer suas transações 🤑",
+                {
+                    widget: "doubtOptions",
+                }
+            );
+
+        this.updateChatbotState(message);
+    };
+
     greet() {
         const greetingMessages = [
             "Olá! o que gostaria de saber?",

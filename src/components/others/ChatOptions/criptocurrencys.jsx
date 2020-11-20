@@ -5,9 +5,9 @@ import "./criptocurrencys.css";
 const DoubtOptions = (props) => {
   const options = [
     { text: "O que são Criptomoedas?", handler: props.actionProvider.criptoInfo, id: 1 },
-    { text: "Como funcionam?", handler: () => {}, id: 2 },
-    { text: "Quando surgiram?", handler: () => {}, id: 3 },
-    { text: "Como investir?", handler: () => {}, id: 4 },
+    { text: "Como funcionam?", handler: props.actionProvider.criptoWorks, id: 2 },
+    { text: "Quando surgiram?", handler: props.actionProvider.criptoBorn, id: 3 },
+    { text: "Como investir?", handler: props.actionProvider.criptoHow, id: 4 },
   ];
 
   const optionsMarkup = options.map((option) => (
