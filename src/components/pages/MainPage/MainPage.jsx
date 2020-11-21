@@ -22,6 +22,8 @@ export default function MainPage() {
                         <h3>Limite: </h3>
                     </Card>
 
+
+                        {/* Map com as transferências feitas */}
                     <Card titulo="Transferências" color="gold" width="500px" height="300px">
                         <ul style={{ listStyle: 'none', textAlign: 'initial' }}>
                             <li> 1- Nome: Marcos Paulo - Valor:R$50,00</li>
