@@ -20,9 +20,9 @@ export default function SideBar() {
                     <Dropdown.Menu>
                         <Dropdown.Item href="/Main">Pagina Principal</Dropdown.Item>
                         <Dropdown.Item href="/Main/User">Minha Conta</Dropdown.Item>
-                        <Dropdown.Item href="/Main/Transferences">Transferências</Dropdown.Item>
                         <Dropdown.Item href="/Main/Payments">Pagamentos</Dropdown.Item>
                         <Dropdown.Item href="/Main/Deposits">Depósitos</Dropdown.Item>
+                        <Dropdown.Item href="/Main/Transferences">Transferir</Dropdown.Item>
                         <Dropdown.Item href="/Main/Cards">Cartões</Dropdown.Item>
                         <Dropdown.Item href="/Login" onClick={() => Logout()}>Sair</Dropdown.Item>
                     </Dropdown.Menu>

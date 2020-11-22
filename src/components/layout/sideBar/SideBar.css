@@ -1,6 +1,7 @@
-.Chatbot{
-    right: 20px;
-    bottom: 10px;
-    position: fixed;
-
+.sideBar a:hover{
+    color: gold;
+    background: black;
+}
+.sideBar a{
+    background: gold;
 }

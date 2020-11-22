@@ -3,11 +3,13 @@ import './MyAccount.css'
 import Card from '../../../../layout/Card/Card'
 
 
-export default function MyAccount(){
+export default function MyAccount() {
 
-    return(
+    return (
         <div className="MyAccount">
-           <h1>Dados da conta</h1>
+            <Card titulo="Minha conta">
+                <h1>Dados da conta</h1>
+            </Card>
         </div>
     )
 }

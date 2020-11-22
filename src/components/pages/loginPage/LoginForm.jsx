@@ -3,11 +3,12 @@ import { Redirect } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 
 
+
 var isLoggedIn = localStorage.getItem("isLoggedIn") || false
 
 function Login() {
     isLoggedIn = true;
-    var userName = document.getElementById("userName").value
+    var userName = document.getElementById("userCPF").value
     localStorage.setItem("isLoggedIn", isLoggedIn)
     localStorage.setItem("userName", userName)
 }
@@ -16,10 +17,10 @@ export default function LoginForm() {
 
     if (isLoggedIn === false) {
         return (
-            <div>
+            <div className="loginForm">
                 <form onSubmit={() => Login()}>
-                    <input id="userName" type="text" placeholder="Usuario" required /> <br />
-                    <input type="password" placeholder="Senha" required/> <br />
+                    <input id="userCPF" type="text" placeholder="CPF" minlength="11" maxlength="11" required /> <br />
+                    <input type="password" placeholder="Senha" minlength="8" required/> <br />
                     <Button type="submit" variant="outline-warning">Login</Button>
                     <a href="/Cadastro"><Button variant="outline-warning" type="button">Cadastrar</Button> </a>
                 </form>

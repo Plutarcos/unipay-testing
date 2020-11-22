@@ -16,22 +16,11 @@ export default function MainPage() {
         return (
             <div>
                 <div className="mainContent">
-                    <Card titulo="Minha Conta" color="gold" width="500px" height="300px">
-                        <h3>Saldo: </h3>
-                        <h3>Fatura: </h3>
-                        <h3>Limite: </h3>
+                    <Card titulo="Resumo da Conta" color="gold" width="500px" height="300px">
+                        <h3>Saldo: 35.00Btc</h3>
+                        <h3>Conta: 11154-5</h3>
                     </Card>
 
-
-                        {/* Map com as transferências feitas */}
-                    <Card titulo="Transferências" color="gold" width="500px" height="300px">
-                        <ul style={{ listStyle: 'none', textAlign: 'initial' }}>
-                            <li> 1- Nome: Marcos Paulo - Valor:R$50,00</li>
-                            <li> 1- Nome: Paulo Marcos - Valor:R$500,00</li>
-                            <li> 1- Nome: Parcos Maulo - Valor:R$5000,00</li>
-                            <li> 1- Nome: Marlo Paucos - Valor:R$50000,00</li>
-                        </ul>
-                    </Card>
                 </div>
 
             </div>

@@ -29,7 +29,13 @@
 }
 .Chatbot{
     z-index: 10;
+    text-align: left;
+    flex: 1;
 }
 .Card{
     z-index: 9;
+}
+.TopHeader{
+    display: flex;
+    flex: 1;
 }

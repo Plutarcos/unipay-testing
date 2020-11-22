@@ -12,7 +12,7 @@ export default function Transferences() {
 
     return (
         <div className="Transferences">
-            <Card titulo="Transferências" color="gold" borderR="5px">
+            <Card titulo="Transferir" color="gold" borderR="5px">
                 <Form onSubmit={() => Transfer()}>
                     <Form.Label>CPF Destinatário</Form.Label>
                     <Form.Control required placeholder="000.000.000-00" /><br />

@@ -14,7 +14,20 @@ export default function LoginPage() {
     return (
 
         <div className="LoginPage">
-            <h2>UNIPAY</h2>
+            <div className="TopHeader">
+                <div className="Chatbot">
+                    <Dropdown drop="down">
+                        <Dropdown.Toggle variant="outline-warning" id="dropdown-basic">
+                            Ajuda
+                     </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            <ChatbotComponent />
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </div>
+                <h2>UNIPAY</h2>
+            </div>
             <div className="LoginForm">
 
                 <Card titulo="Login" color="#ffff00" borderR="20px">
@@ -46,17 +59,6 @@ export default function LoginPage() {
                 </Carousel.Item>
             </Carousel>
 
-            <div className="Chatbot">
-                <Dropdown drop="up">
-                    <Dropdown.Toggle variant="outline-warning" id="dropdown-basic">
-                        Ajuda
-                     </Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                        <ChatbotComponent />
-                    </Dropdown.Menu>
-                </Dropdown>
-            </div>
         </div>
     )
 
