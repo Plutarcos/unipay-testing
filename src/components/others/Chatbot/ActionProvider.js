@@ -57,7 +57,7 @@ class ActionProvider {
             this.createChatBotMessage(
                 "Qual sua dúvida?",
                 {
-                    widget: "moreInfo",
+                    widget: "doubtOptions",
                 }
             );
 
