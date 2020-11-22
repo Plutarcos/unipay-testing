@@ -1,5 +1,7 @@
 .Transferences {
     color: white;
     justify-content: center;
+    display: inline-block;
+    text-align: initial;
 /* Alinhar */
 }

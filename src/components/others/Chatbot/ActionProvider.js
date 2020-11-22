@@ -10,7 +10,7 @@ class ActionProvider {
             this.createChatBotMessage(
                 "Uma criptomoeda é um meio de troca, podendo ser centralizado ou descentralizado que se utiliza da tecnologia de blockchain e da criptografia para assegurar a validade das transações e a criação de novas unidades da moeda 😎.",
                 {
-                    widget: "doubtOptions",
+                    widget: "moreInfo",
                 }
             );
 
@@ -22,7 +22,7 @@ class ActionProvider {
             this.createChatBotMessage(
                 "A criptomoeda é um código virtual que pode ser convertido em valores reais. Geralmente, é necessário comprar do emissor ou de alguém que já tenha a moeda. A criptomoeda utiliza criptografia. Ou seja, são códigos difíceis de quebrar e que garantem que as transações sejam muito mais seguras 🔐.",
                 {
-                    widget: "doubtOptions",
+                    widget: "moreInfo",
                 }
             );
 
@@ -34,7 +34,7 @@ class ActionProvider {
             this.createChatBotMessage(
                 "A primeira criptomoeda descentralizada, o Bitcoin, foi criado em 2009 por Satoshi Nakamoto.",
                 {
-                    widget: "doubtOptions",
+                    widget: "moreInfo",
                 }
             );
 
@@ -46,8 +46,27 @@ class ActionProvider {
             this.createChatBotMessage(
                 "Nossa plataforma garante um ótimo inicio para quem quer começar a investir em Criptomoedas. Basta criar uma conta e começar a fazer suas transações 🤑",
                 {
-                    widget: "doubtOptions",
+                    widget: "moreInfo",
                 }
+            );
+
+        this.updateChatbotState(message);
+    };
+    moreInfo = () => {
+        const message =
+            this.createChatBotMessage(
+                "Qual sua dúvida?",
+                {
+                    widget: "moreInfo",
+                }
+            );
+
+        this.updateChatbotState(message);
+    };
+    byeBye = () => {
+        const message =
+            this.createChatBotMessage(
+                "Espero ter ajudado. Até mais tarde 😉",
             );
 
         this.updateChatbotState(message);
