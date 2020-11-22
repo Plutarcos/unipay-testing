@@ -48,7 +48,7 @@ export default function LoginPage() {
 
             <div className="Chatbot">
                 <Dropdown drop="up">
-                    <Dropdown.Toggle variant="outline-info" id="dropdown-basic">
+                    <Dropdown.Toggle variant="outline-warning" id="dropdown-basic">
                         Ajuda
                      </Dropdown.Toggle>
 

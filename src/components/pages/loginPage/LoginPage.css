@@ -30,3 +30,6 @@
 .Chatbot{
     z-index: 10;
 }
+.Card{
+    z-index: 9;
+}

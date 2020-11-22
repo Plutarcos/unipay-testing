@@ -1,6 +1,10 @@
 import React from 'react'
 import SignupForm from './SignupForm'
 import Card from '../../layout/Card/Card'
+
+import Button from 'react-bootstrap/Button'
+
+
 import './Signup.css'
 
 export default function LoginPage() {
@@ -8,14 +12,14 @@ export default function LoginPage() {
         <div>
 
             <div className="UpperMenu">
-                <Card color="grey">
-                    <a href="/Login"><button type="button">Voltar</button></a>
-                    <a href="https://www.google.com">Ajuda</a>
+                <Card color="gold" borderR="10px">
+                    <a href="/Login"><Button variant="outline-warning" type="button">Voltar</Button></a>
+                    <a href="https://www.google.com"><Button variant="outline-danger" type="button">Ajuda</Button></a>
                 </Card>
             </div>
 
             <div className="signupForm">
-                <Card titulo="Cadastre-se" color="dimgrey">
+                <Card titulo="Cadastre-se" color="gold">
                     <SignupForm />
                 </Card>
             </div>
