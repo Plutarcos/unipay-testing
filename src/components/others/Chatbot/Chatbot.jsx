@@ -9,7 +9,7 @@ import config from './config';
 export default function ChatbotComponent() {
     return (
         <div>
-            <Chatbot headerText="Conversando com: PimBot" placeholderText="Envie sua mensagem" config={config} actionProvider={ActionProvider} messageParser={MessageParser} />
+            <Chatbot headerText="Conversando com: C3PO" placeholderText="Envie sua mensagem" config={config} actionProvider={ActionProvider} messageParser={MessageParser} />
         </div>
     )
 }

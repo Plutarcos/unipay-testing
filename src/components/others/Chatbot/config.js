@@ -5,9 +5,9 @@ import MoreInfo from "../ChatOptions/moreInfo"
 
 
 const config = {
-    botName: 'PimBot',
+    botName: 'C3PO',
     initialMessages: [
-        createChatBotMessage(`Olá, eu sou o PimBot, O Assistente virtual da Unipay. Em que posso ajuda-lo? `, {
+        createChatBotMessage(`Olá, eu sou o C3PO, O Assistente virtual da Unipay. Em que posso ajuda-lo? `, {
             widget: "doubtOptions",
 
         }),
