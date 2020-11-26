@@ -26,7 +26,7 @@ export default class MyAccount extends Component {
         const { client } = this.state;
 
         return (
-            <div className="Cards">
+            <div className="MyAccount">
                 <Card titulo="Dados da Conta">
                     
                     <h2>Nome: {client.clientName}</h2>
