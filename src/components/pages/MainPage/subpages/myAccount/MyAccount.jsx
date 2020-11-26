@@ -67,6 +67,8 @@ export default class MyAccount extends Component {
             .then(data => {
                 if (data.ok) {
                     localStorage.clear()
+                    window.location.reload()
+
                 } else {
                     data.json().then(data => {
                         if (data.error) {
