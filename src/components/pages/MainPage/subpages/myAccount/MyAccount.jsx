@@ -31,7 +31,7 @@ export default class MyAccount extends Component {
                     
                     <h2>Nome: {client.clientName}</h2>
                     <hr/>
-                    <h2>Conta: {client.id}</h2>
+                    <h2>Conta: N°{client.id}</h2>
                     <hr/>
                     <h2>CPF: {client.cpf} </h2>
                     <hr/>
