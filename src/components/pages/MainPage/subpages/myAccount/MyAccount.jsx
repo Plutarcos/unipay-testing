@@ -59,9 +59,9 @@ export default class MyAccount extends Component {
         }
     }
     handleClick = event => {
-        const { id } = this.state.id;
+        const { client } = this.state;
 
-        fetch(`${process.env.REACT_APP_API_URL}/sistema/clients/${id}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/sistema/clients/${client.id}`, {
             method: "delete"
         })
             .then(data => {
