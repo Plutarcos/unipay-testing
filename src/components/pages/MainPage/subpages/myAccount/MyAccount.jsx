@@ -66,8 +66,10 @@ export default class MyAccount extends Component {
         })
             .then(data => {
                 if (data.ok) {
-                    localStorage.clear()
-                    window.location.reload()
+                    if (window.confirm("Deseja Realmente excluir sua conta??")) {
+                        localStorage.clear()
+                        window.location.reload()
+                    }
 
                 } else {
                     data.json().then(data => {
