@@ -66,7 +66,7 @@ export default class MyAccount extends Component {
         })
             .then(data => {
                 if (data.ok) {
-                    if (window.confirm("Deseja Realmente excluir sua conta??")) {
+                    if (window.confirm("Deseja Realmente excluir sua conta??") == true) {
                         localStorage.clear()
                         window.location.reload()
                     }
