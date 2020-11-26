@@ -1,0 +1,15 @@
+.MainHeader {
+    position: relative;
+    background: gold;
+    display: flexbox;
+    padding: 10px;
+    display: flex;
+}
+.userData{
+    text-align: right;
+    flex: 1;
+}
+.Sidebar{
+    text-align: left;
+    flex: 1;
+}

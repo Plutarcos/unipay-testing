@@ -1,0 +1,10 @@
+.UpperMenu{
+    display: flex;
+    justify-content: center;
+    
+}
+.signupForm{
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+}

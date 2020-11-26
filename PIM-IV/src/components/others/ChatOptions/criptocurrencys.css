@@ -1,0 +1,13 @@
+.doubt-options-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.doubt-option-button {
+    padding: 0.5rem;
+    border-radius: 25px;
+    background: transparent;
+    border: 1px solid rgb(255, 217, 0);
+    margin: 3px;
+}

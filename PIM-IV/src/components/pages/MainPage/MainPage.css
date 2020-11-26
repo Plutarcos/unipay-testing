@@ -1,0 +1,6 @@
+.mainContent{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}

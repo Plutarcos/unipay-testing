@@ -1,0 +1,7 @@
+.sideBar a:hover{
+    color: gold;
+    background: black;
+}
+.sideBar a{
+    background: gold;
+}

@@ -1,0 +1,41 @@
+.LoginPage {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: black;
+    flex-direction: column;
+}
+
+.LoginForm {
+    display: flex;
+    background: gold;
+    justify-content: center;
+}
+
+.carousel {
+    width: 80%;
+    margin: auto;
+    border: 10px gold solid;
+    border-radius: 30px;
+}
+.carousel h1, h2{
+    color: black;
+    -webkit-text-fill-color: gold; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+.carousel img{
+    width: fit-content;
+}
+.Chatbot{
+    z-index: 10;
+    text-align: left;
+    flex: 1;
+}
+.Card{
+    z-index: 9;
+}
+.TopHeader{
+    display: flex;
+    flex: 1;
+}
