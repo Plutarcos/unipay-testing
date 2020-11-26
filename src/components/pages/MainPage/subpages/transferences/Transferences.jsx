@@ -14,11 +14,8 @@ export default function Transferences() {
         <div className="Transferences">
             <Card titulo="Transferir" color="gold" borderR="5px">
                 <Form onSubmit={() => Transfer()}>
-                    <Form.Label>CPF Destinatário</Form.Label>
-                    <Form.Control required placeholder="000.000.000-00" /><br />
-                    <hr />
-                    <Form.Label>Conta Destinatário</Form.Label>
-                    <Form.Control required placeholder="00000-00" /><br />
+                    <Form.Label>Endereço Blockchain Destinatário</Form.Label>
+                    <Form.Control required placeholder="Endereço Blockchain" /><br />
                     <hr />
                     <Form.Label>Valor</Form.Label>
                     <Form.Control required placeholder="R$00,00" /> <br />

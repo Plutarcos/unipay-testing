@@ -24,7 +24,6 @@ export default class MyAccount extends Component {
 
 
     render() {
-        moment.locale('pt-br');
         const { client } = this.state;
 
         var isLogged = localStorage.getItem("isLoggedIn")
@@ -61,27 +60,28 @@ export default class MyAccount extends Component {
     handleClick = event => {
         const { client } = this.state;
 
-        fetch(`${process.env.REACT_APP_API_URL}/sistema/clients/${client.id}`, {
-            method: "delete"
-        })
-            .then(data => {
-                if (data.ok) {
-                    if (window.confirm("Deseja Realmente excluir sua conta??") == true) {
-                        localStorage.clear()
-                        window.location.reload()
-                    }
-
-                } else {
-                    data.json().then(data => {
-                        if (data.error) {
-                            this.setState({ erro: data.error });
-                        }
-                    });
-                }
+        if (window.confirm("Deseja Realmente excluir sua conta? Após a confirmação, seus dados serão apagados PERMANENTEMENTE e NÃO PODERÃO ser recuperados") === true) {
+            fetch(`${process.env.REACT_APP_API_URL}/sistema/clients/${client.id}`, {
+                method: "delete"
             })
-            .catch(erro => this.setState({ erro: erro }));
+                .then(data => {
+                    if (data.ok) {
 
-        event.preventDefault();
-    };
+                        // localStorage.clear()
+                        // window.location.reload()
+
+                    } else {
+                        data.json().then(data => {
+                            if (data.error) {
+                                this.setState({ erro: data.error });
+                            }
+                        });
+                    }
+                })
+                .catch(erro => this.setState({ erro: erro }));
+
+            event.preventDefault();
+        };
+    }
 
 }
