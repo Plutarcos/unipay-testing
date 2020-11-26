@@ -88,7 +88,7 @@ class SignupClient extends Component {
     };
 
     handleSubmit = event => {
-        fetch(`http://localhost:3003/sistema/clients`, {
+        fetch(`${process.env.REACT_APP_API_URL}/sistema/clients`, {
             method: "post",
             body: JSON.stringify(this.state.client),
             headers: {

@@ -8,7 +8,6 @@ import MyAccount from './components/pages/MainPage/subpages/myAccount/MyAccount'
 import Transferences from './components/pages/MainPage/subpages/transferences/Transferences'
 import Deposits from './components/pages/MainPage/subpages/deposits/Deposits'
 import Payments from './components/pages/MainPage/subpages/payments/Payments'
-import Cards from './components/pages/MainPage/subpages/cards/Cards'
 
 export default function Routes() {
     return (
@@ -23,7 +22,6 @@ export default function Routes() {
                 <Route path="/Main/Transferences" component={Transferences} />
                 <Route path="/Main/Deposits" component={Deposits} />
                 <Route path="/Main/Payments" component={Payments} />
-                <Route path="/Main/Cards" component={Cards} />
 
 
                 {/* Redireciona para a pagina de Login automaticamente */}

@@ -23,7 +23,6 @@ export default function SideBar() {
                         <Dropdown.Item href="/Main/Payments">Pagamentos</Dropdown.Item>
                         <Dropdown.Item href="/Main/Deposits">Depósitos</Dropdown.Item>
                         <Dropdown.Item href="/Main/Transferences">Transferir</Dropdown.Item>
-                        <Dropdown.Item href="/Main/Cards">Cartões</Dropdown.Item>
                         <Dropdown.Item href="/Login" onClick={() => Logout()}>Sair</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
