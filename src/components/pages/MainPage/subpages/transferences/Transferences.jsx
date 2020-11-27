@@ -92,7 +92,7 @@ class Transferences extends Component {
             .catch(erro => this.setState({ erro: erro }))
             fetch(`${process.env.REACT_APP_API_URL}/sistema/transfer/${blockchainAddress}`, {
                 method: "put",
-                body: JSON.stringify({"moneyBalance": moneyBalance}),
+                body: {"moneyBalance": moneyBalance},
                 headers: {
                     "Content-Type": "application/json"
                 }
