@@ -22,7 +22,6 @@ export default class MyAccount extends Component {
             .catch(erro => this.setState({ erro }))
     }
 
-
     render() {
         const { client } = this.state;
 
@@ -67,8 +66,8 @@ export default class MyAccount extends Component {
                 .then(data => {
                     if (data.ok) {
 
-                        // localStorage.clear()
-                        // window.location.reload()
+                        localStorage.clear()
+                        window.location.reload()
 
                     } else {
                         data.json().then(data => {

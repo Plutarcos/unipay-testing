@@ -69,9 +69,8 @@ class Payments extends Component {
     }
 
     handleSubmit = event => {
-        const { id } = this.state.client
-
-        fetch(`${process.env.REACT_APP_API_URL}/sistema/clients/${id}`, {
+        const { id, moneyBalance } = this.state.client
+        fetch(`${process.env.REACT_APP_API_URL}/sistema/pay/${id}`, {
             method: "put",
             body: JSON.stringify(this.state.client),
             headers: {
