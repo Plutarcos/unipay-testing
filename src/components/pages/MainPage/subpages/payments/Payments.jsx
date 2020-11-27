@@ -50,7 +50,7 @@ class Payments extends Component {
                         <Form.Control placeholder="Insira aqui o numero do boleto" /> <br />
                         <hr />
                         <Form.Label>Valor a pagar</Form.Label>
-                        <Form.Control id="moneyBalance" name="moneyBalance" type="text" required placeholder="R$00,00" value={this.state.client.moneyBalance} onChange={this.handleInputChange} /> <br />
+                        <Form.Control id="moneyBalance" name="moneyBalance" type="text" required placeholder="R$00,00" onChange={this.handleInputChange} /> <br />
                         <Button variant="outline-primary" type="submit">Transferir</Button>
                     </Form>
                 </Card>
