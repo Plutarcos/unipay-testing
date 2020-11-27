@@ -66,7 +66,7 @@ class ActionProvider {
     byeBye = () => {
         const message =
             this.createChatBotMessage(
-                "Espero ter ajudado. Até mais tarde 😉",
+                "Espero ter ajudado😉",
             );
 
         this.updateChatbotState(message);
@@ -95,6 +95,7 @@ class ActionProvider {
             "Desculpa, não consegui decifrar sua mensagem 😔 Selecione uma opção:",
             "Foi mal, não consegui entender o que disse 😅 Talvez queira saber:",
             "Não entendi. Qual seria a sua dúvida?",
+            "Ainda estou aprendendo seu idioma😅 Qual seria sua dúvida?",
 
         ]
 

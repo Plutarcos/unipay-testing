@@ -20,10 +20,16 @@ export default class MainPage extends Component {
 
         fetch(`${process.env.REACT_APP_API_URL}/sistema/clients/${cpf}`)
             .then(client =>
-                client.json().then(client => this.setState({ client }))
+                client.json().then(client => this.setState({ client },
+                    localStorage.setItem("userName", client.clientName))
+                )
+                
             )
             .catch(erro => this.setState({ erro }))
+
     }
+
+    
 
     render() {
         const { client } = this.state;
@@ -34,9 +40,10 @@ export default class MainPage extends Component {
                 <div>
                     <div className="mainContent">
                         <Card titulo="Resumo da Conta" color="gold" width="500px" height="300px">
-                            <h3 style={client.moneyBalance <= 0 ? {color: 'red'}: {color: 'green'}}>Saldo: {parseFloat(client.moneyBalance).toFixed(2)}Btc</h3>
+                            <h3 style={client.moneyBalance <= 0 ? { color: 'red' } : { color: 'green' }}>Saldo: {parseFloat(client.moneyBalance).toFixed(2)}Btc</h3>
                             <h2>Conta: N°{client.id}</h2>
                         </Card>
+
 
                     </div>
 
