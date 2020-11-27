@@ -34,7 +34,7 @@ export default class MainPage extends Component {
                 <div>
                     <div className="mainContent">
                         <Card titulo="Resumo da Conta" color="gold" width="500px" height="300px">
-                            <h3>Saldo: {client.moneyBalance}Btc</h3>
+                            <h3 style={client.moneyBalance <= 0 ? {color: 'red'}: {color: 'green'}}>Saldo: {parseFloat(client.moneyBalance).toFixed(2)}Btc</h3>
                             <h2>Conta: N°{client.id}</h2>
                         </Card>
 

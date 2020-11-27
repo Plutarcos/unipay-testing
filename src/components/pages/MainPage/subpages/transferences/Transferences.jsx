@@ -41,20 +41,38 @@ class Transferences extends Component {
     }
 
     render() {
-        return (
-            <div className="Payments">
-                <Card titulo="Transferir" color="gold" borderR="5px">
-                    <Form onSubmit={this.handleSubmit}>
-                        <Form.Label>Endereço Blockchain Destinatário</Form.Label>
-                        <Form.Control required id="blockchainAddress" name="blockchainAddress" type="text" placeholder="Endereço Blockchain" onChange={this.handleInputChange} /><br />
-                        <hr />
-                        <Form.Label>Valor</Form.Label>
-                        <Form.Control required id="moneyBalance" name="moneyBalance" type="text" placeholder="R$00,00" onChange={this.handleInputChange} /> <br />
-                        <Button variant="outline-primary" type="submit">Transferir</Button>
-                    </Form>
-                </Card>
-            </div>
-        )
+
+        if (this.state.client.moneyBalance <= 0) {
+            return (
+                <div className="Payments">
+                    <Card titulo="Transferir" color="gold" borderR="5px">
+                        <Form onSubmit={this.handleSubmit}>
+                            <Form.Label>Endereço Blockchain Destinatário</Form.Label>
+                            <Form.Control disabled id="blockchainAddress" name="blockchainAddress" type="text" placeholder="Endereço Blockchain" onChange={this.handleInputChange} /><br />
+                            <hr />
+                            <h4 style={{ color: 'red' }}>Saldo Insuficiente</h4>
+                            <Form.Control disabled id="moneyBalance" name="moneyBalance" type="text" placeholder="R$00,00" onChange={this.handleInputChange} /> <br />
+                            <Button disabled variant="outline-primary" type="submit">Transferir</Button>
+                        </Form>
+                    </Card>
+                </div>
+            )
+        } else {
+            return (
+                <div className="Payments">
+                    <Card titulo="Transferir" color="gold" borderR="5px">
+                        <Form onSubmit={this.handleSubmit}>
+                            <Form.Label>Endereço Blockchain Destinatário</Form.Label>
+                            <Form.Control required id="blockchainAddress" name="blockchainAddress" type="text" placeholder="Endereço Blockchain" onChange={this.handleInputChange} /><br />
+                            <hr />
+                            <Form.Label>Valor</Form.Label>
+                            <Form.Control required id="moneyBalance" name="moneyBalance" type="text" placeholder="R$00,00" onChange={this.handleInputChange} /> <br />
+                            <Button variant="outline-primary" type="submit">Transferir</Button>
+                        </Form>
+                    </Card>
+                </div>
+            )
+        }
     }
 
     handleInputChange = event => {
@@ -68,7 +86,7 @@ class Transferences extends Component {
     }
 
     handleSubmit = event => {
-        const { id, blockchainAddress, moneyBalance } = this.state.client
+        const { id, blockchainAddress } = this.state.client
 
         fetch(`${process.env.REACT_APP_API_URL}/sistema/pay/${id}`, {
             method: "put",
@@ -80,6 +98,7 @@ class Transferences extends Component {
             .then(data => {
                 if (data.ok) {
                     alert('Realizando Transferência...')
+                    console.log(JSON.stringify(this.state.client))
                 } else {
                     data.json().then(data => {
                         if (data.error) {
@@ -90,25 +109,25 @@ class Transferences extends Component {
             })
 
             .catch(erro => this.setState({ erro: erro }))
-            fetch(`${process.env.REACT_APP_API_URL}/sistema/transfer/${blockchainAddress}`, {
-                method: "put",
-                body: JSON.stringify({"moneyBalance": moneyBalance}),
-                headers: {
-                    "Content-Type": "application/json"
+        fetch(`${process.env.REACT_APP_API_URL}/sistema/transfer/${blockchainAddress}`, {
+            method: "put",
+            body: JSON.stringify({ moneyBalance: JSON.parse(this.state.client.moneyBalance) }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            .then(data => {
+                if (data.ok) {
+                    alert('Transferência Realizada!')
+                } else {
+                    data.json().then(data => {
+                        if (data.error) {
+                            this.setState({ erro: data.error })
+                        }
+                    });
                 }
             })
-                .then(data => {
-                    if (data.ok) {
-                        alert('Transferência Realizada!')
-                    } else {
-                        data.json().then(data => {
-                            if (data.error) {
-                                this.setState({ erro: data.error })
-                            }
-                        });
-                    }
-                })
-                .catch(erro => this.setState({ erro: erro }))
+            .catch(erro => this.setState({ erro: erro }))
 
         event.preventDefault()
     };

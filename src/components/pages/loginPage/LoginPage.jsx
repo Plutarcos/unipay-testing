@@ -21,8 +21,8 @@ export default function LoginPage() {
                 <div className="TopHeader">
                     <div className="Chatbot">
                         <Dropdown drop="down">
-                            <Dropdown.Toggle variant="outline-warning" id="dropdown-basic">
-                                Ajuda
+                            <Dropdown.Toggle variant="warning" id="dropdown-basic">
+                                Dúvidas com C3PO
                      </Dropdown.Toggle>
 
                             <Dropdown.Menu>

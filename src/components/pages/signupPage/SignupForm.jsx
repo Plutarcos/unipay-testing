@@ -88,25 +88,40 @@ class SignupClient extends Component {
     };
 
     handleSubmit = event => {
-        fetch(`${process.env.REACT_APP_API_URL}/sistema/clients`, {
-            method: "post",
-            body: JSON.stringify(this.state.client),
-            headers: {
-                "Content-Type": "application/json"
-            }
+
+        fetch(`${process.env.REACT_APP_API_URL}/sistema/account/${this.state.client.cpf}`, {
         })
+
             .then(data => {
                 if (data.ok) {
-                    this.setState({ redirect: true });
+                    alert('CPF já registrado')
+
+
                 } else {
-                    data.json().then(data => {
-                        if (data.error) {
-                            this.setState({ erro: data.error });
+                    fetch(`${process.env.REACT_APP_API_URL}/sistema/clients`, {
+                        method: "post",
+                        body: JSON.stringify(this.state.client),
+                        headers: {
+                            "Content-Type": "application/json"
                         }
-                    });
+                    })
+                        .then(data => {
+                            if (data.ok) {
+                                this.setState({ redirect: true });
+                            } else {
+                                data.json().then(data => {
+                                    if (data.error) {
+                                        this.setState({ erro: data.error });
+                                    }
+                                });
+                            }
+                        })
+                        .catch(erro => this.setState({ erro: erro }));
                 }
             })
             .catch(erro => this.setState({ erro: erro }));
+
+
 
         event.preventDefault();
     };

@@ -14,7 +14,6 @@ export default function LoginPage() {
             <div className="UpperMenu">
                 <Card color="gold" borderR="10px">
                     <a href="/Login"><Button variant="outline-warning" type="button">Voltar</Button></a>
-                    <a href="https://www.google.com"><Button variant="outline-danger" type="button">Ajuda</Button></a>
                 </Card>
             </div>
 

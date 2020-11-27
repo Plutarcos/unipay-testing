@@ -32,7 +32,7 @@ export default class Deposits extends Component {
             <div className="Deposits">
                 <Card titulo="Depositar">
                     <h3>Endereço bitcoin: <h3 id="btcAddres" Style="display:none">{client.blockchainAddress}</h3></h3>
-                    <Alert id="btcWarning" Style="display:none" variant="warning">Utilize este endereço para transferir para a sua conta de outros bancos</Alert>
+                    <Alert id="btcWarning" Style="display:none" variant="warning">Utilize este endereço para transferir para a sua conta</Alert>
                     <Button onClick={this.showBtcAddres} variant="warning" type="button">Mostrar</Button>
                 </Card>
             </div>
