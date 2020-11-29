@@ -69,7 +69,7 @@ class Payments extends Component {
                             <hr />
                             <Form.Label>Valor a pagar <Form.Label style={{opacity: 0.4}}>- (em reais)</Form.Label></Form.Label>
                             <Form.Control id="moneyBalance" name="moneyBalance" type="text" required placeholder="R$00,00" onChange={this.handleInputChange} /> <br />
-                            <Button variant="outline-primary" type="submit">Transferir</Button>
+                            <Button variant="outline-primary" type="submit">Pagar</Button>
                         </Form>
                     </Card>
                 </div>
