@@ -21,6 +21,7 @@
 }
 .carousel h1, h2{
     color: black;
+    z-index: 1;
     -webkit-text-fill-color: gold; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
