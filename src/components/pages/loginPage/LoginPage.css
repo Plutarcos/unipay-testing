@@ -17,6 +17,7 @@
     margin: auto;
     border: 10px gold solid;
     border-radius: 30px;
+    z-indez: 0;
 }
 .carousel h1, h2{
     color: black;
